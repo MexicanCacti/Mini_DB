@@ -22,7 +22,9 @@ Windows or another supported operating system
 
 # Running Tests
 (From Top-Level Directory [...\DB_Storage_Query_Processor] )
-- [Google_Tests] <br> 
+- [Google_Tests : Expressions] <br> ./google_tests/expression_tests/Debug/all_expression_tests
+- [Google_Tests : Executors] <br> ./google_tests/executor_tests/Debug/all_executor_tests
+- [Query Demo] <br> ./tests/Debug/query_demo
 
 # My Development Environment Info
 - Operating System: Windows
@@ -34,10 +36,7 @@ Windows or another supported operating system
 - Build Generator: Visual Studio 18 2026
 
 # Project Organization
+- query_processor/ - Contains the query processor library
 - storage_engine/ - Contains the storage engine library
-- google_tests/ - Unit tests written with GoogleTests for testing class functionality
-- tests/ - Hand-written tests used to demonstrate correctness
-
-## Current Implementation Notes
-
-- Cmake will throw errors but the code will run fine! Currently working on fixing that x3
+- google_tests/ - Unit tests written with GoogleTests for testing class functionality of query_processor expressions & executors
+- tests/ - Hand-Written test for query_demo
