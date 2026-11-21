@@ -5,3 +5,10 @@ database_data/
 storage/
 tests/Debug/
 rids.txt
+build.txt
+compile.txt
+executor_tests.txt
+expression_tests.txt
+query_demo.txt
+running_commands.png
+running_query_demo.png
