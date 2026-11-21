@@ -1,4 +1,4 @@
-### Github Link: https://github.com/MexicanCacti/DB_Storage_Query_Processor
+### Github Link: https://github.com/MexicanCacti/Mini_DB
 
 # Development Environment
 
