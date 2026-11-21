@@ -4,3 +4,4 @@ build/
 database_data/
 storage/
 tests/Debug/
+rids.txt
