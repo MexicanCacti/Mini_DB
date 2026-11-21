@@ -9,6 +9,7 @@ bool UpdateExecutor::Next(Row& out)
 
     std::unordered_set<std::int16_t> seenRIDS;
 
+    std::vector<Field> schemaField = childExecutor->OutputSchema().getFieldList();
     while(childExecutor->Next(row))
     {
         std::unordered_set<std::size_t> usedColumns;
@@ -16,8 +17,8 @@ bool UpdateExecutor::Next(Row& out)
         {
             throw std::invalid_argument("[Update Executor - Next]: Found row that is not from same table / has repeat RID");
         }
-
         std::vector<FieldVariant> updatedValues = row.tuple.getTupleValues();
+        if(updatedValues.size() != schemaField.size()) throw std::invalid_argument("[Update Executor - Next]: column count mismatch");
         seenRIDS.insert(row.source.value().rid.tupleSlot);
         
         for(const UpdateExpression& expression : updateExpressions)
